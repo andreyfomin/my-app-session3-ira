@@ -1,0 +1,7 @@
+<table>
+  <tr *ngFor="let u of allUsers | async; let idx = index">
+    <td><a [routerLink]="['/user', idx]">{{idx}}: {{u.name}}</a></td>
+    <td>{{u.phone}}</td>
+    <td>{{u.date}}</td>
+  </tr>
+</table>

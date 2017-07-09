@@ -1,0 +1,18 @@
+<div>
+  <input #inp type="text" [(ngModel)]="theValue" (appKeyupDebounced)="getSuggestions()">
+</div>
+
+<div>Search Entered: {{theValue}}</div>
+
+<!-- Display this div only if we DON'T have an error condition -->
+<div *ngIf="!error">
+  Suggestions ({{count}} queries made)
+  <ul>
+    <li *ngFor="let s of suggestions">{{s}}</li>
+  </ul>
+</div>
+
+<!-- Display this div only if we have an error condition -->
+<div *ngIf="error">
+  Error
+</div>

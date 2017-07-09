@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name (must be johnny):</label>
+    <input id="name" class="form-control" name="name" type="text"
+            appMyValidator="johnny"
+            [(ngModel)]="user.name" />
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input id="phone" class="form-control" name="phone" type="text"
+            required pattern="\d+"
+            [(ngModel)]="user.phone" />
+  </div>
+  <input type="submit" value="Save" />
+</form>

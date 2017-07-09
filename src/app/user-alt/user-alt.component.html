@@ -1,0 +1,8 @@
+<p>Name: {{user.name}}</p>
+<p>Phone: {{user.phone}}</p>
+<p>Date: {{user.date}}</p>
+<input type="button" value="Count Up" (click)="wasClicked(1)" />
+<input type="button" value="Count Down" (click)="wasClicked(-1)" />
+<input type="text" placeholder="New Name"
+       [ngModel]="user.name"
+       (ngModelChange)="user.name=$event" />
